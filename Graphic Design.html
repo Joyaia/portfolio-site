@@ -1,0 +1,76 @@
+<html>
+  <head>
+   <title>ZhuoyaoWen‘s portfolio Web</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
+    <link href="artwork.css" rel="stylesheet">
+
+  </head>
+  <header>
+  <nav>
+    <img src="https://cdn.glitch.global/3cd80105-aa6a-4a03-989e-20b15485f3cf/logo.png?v=1731632829756" width="230">
+   <ul> 
+    <li><a href="index.html">Home</a></li>
+    <li><a href="About.html">About</a></li>
+    <li class="dropdown">
+      <a href="#">Artwork</a>
+      <ul class="dropdown-menu">
+    <li><a href="illustration design.html">Illustration</a></li>
+    <li><a href="Animation.html">Animation</a></li>
+    <li><a href="Graphic Design.html">Graphic Design</a></li> 
+      </ul> 
+     </li>
+     <li><a href="Contact.html">Contact</a></li>
+   </ul>
+  </nav>
+</header>
+  <div class="gallery">
+    <img src="https://cdn.glitch.global/3cd80105-aa6a-4a03-989e-20b15485f3cf/%E6%9C%AA%E6%A0%87%E9%A2%98-2.png?v=1734044169906" alt="Image3">
+  <img src="https://cdn.glitch.global/3cd80105-aa6a-4a03-989e-20b15485f3cf/%E6%9C%AA%E6%A0%87%E9%A2%98-39.png?v=1734044173843" alt="Image4">
+  <img src="https://cdn.glitch.global/3cd80105-aa6a-4a03-989e-20b15485f3cf/%E6%9C%AA%E6%A0%87%E9%A2%98-1.png?v=1734044197960" alt="Image5">
+  <img src="https://cdn.glitch.global/3cd80105-aa6a-4a03-989e-20b15485f3cf/Zhuoyaowen.jpg?v=1734044598395" alt="Image6">
+  <img src="https://cdn.glitch.global/3cd80105-aa6a-4a03-989e-20b15485f3cf/silas-baisch-f4bfvVXKZP8-unsplash-1.jpg?v=1734044603404" alt="Image7">
+  <img src="https://cdn.glitch.global/3cd80105-aa6a-4a03-989e-20b15485f3cf/ZhuoyaoWen_CollageFace.jpg?v=1734044646178" alt="Image8">
+  <img src="https://cdn.glitch.global/3cd80105-aa6a-4a03-989e-20b15485f3cf/Zhuoyao%20Wen_NamePlanes.jpg?v=1734044437388" alt="Image9">
+  <img src="https://cdn.glitch.global/3cd80105-aa6a-4a03-989e-20b15485f3cf/Final-ZhuoyaozWen-schizophrenia.jpg?v=1734043462275" alt="Image10">
+  <img src="https://cdn.glitch.global/3cd80105-aa6a-4a03-989e-20b15485f3cf/Final-ZhuoyaoWen-Typeposter.jpg?v=1734043326484" alt="Image2">  
+  <img src="https://cdn.glitch.global/3cd80105-aa6a-4a03-989e-20b15485f3cf/ZhuoyaoWen_AlbumCover_SecondDraft.jpg?v=1734044132906" alt="Image11">
+  <img src="https://cdn.glitch.global/3cd80105-aa6a-4a03-989e-20b15485f3cf/ZhuoyaoWen_exquisitecorpse.jpg?v=1734044604897" alt="Image11">
+  <img src="https://cdn.glitch.global/3cd80105-aa6a-4a03-989e-20b15485f3cf/ZhuoyaoWen_22.3x9.3_DoubleWeightMatte_BookCover.jpg?v=1734043202861" alt="image14">
+  </div>
+   <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+  
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-img");
+      const closeBtn = document.querySelector(".close");
+      const images = document.querySelectorAll(".gallery img");
+
+      images.forEach((img) => {
+        img.addEventListener("click", () => {
+          modal.style.display = "block";
+          modalImg.src = img.src;
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      modal.addEventListener("click", (e) => {
+        if (e.target !== modalImg) {
+          modal.style.display = "none";
+        }
+      });
+    });
+  </script>
+  <body>
+   <footer>
+   <p>&copy;2024 ZhuoyaoWen</p>
+  </footer> 
+  </body>
+</html>

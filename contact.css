@@ -1,0 +1,95 @@
+header {
+  justify-content:center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding:20px;
+}
+body h2{
+  font-size:35px;
+  margin:20px;
+}
+
+header img{
+  margin-right:30px;
+}
+body{
+  background:#E7EACC;
+  padding-bottom:40px;
+  
+}
+
+Nav ul{
+  display: flex;
+  justify-content:center;
+  list-style:none;
+  padding:0;
+}
+
+Nav ul li{
+  margin:0 15px;
+  position:relative;  
+}
+
+Nav ul li a{
+  text-decoration:none;
+  color:#d2abc7;
+  font-size:24px;
+  padding:5px 10px;
+  transition:color 0.3s;
+}
+
+Nav ul li a:hover{
+  color:#d8dcaa
+}
+.dropdown-menu{
+  display:none;
+  max-width:300px;
+  opacity:0;
+  visibility:hidden;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  position:absolute;
+  top:100%;
+  left:-60px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transform: scale(0);
+}
+.dropdown:hover .dropdown-menu{
+  display: block;
+  opacity:0.8;
+  visibility:visible;
+  transform: scale ;
+  transform: scale(1);
+}
+.dropdown-menu a{
+  white-space:nowrap;
+}
+
+input[type="text"] {
+    background-color: #e2c7da;
+    border: 0px solid;   
+    padding: 20px;           
+    font-size: 16px;    
+  }
+
+
+  input[type="text"]:focus {@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+*{font-family:Ayuthaya,"Geist Mono", monospace;}
+}
+
+input[type="submit"], input[type="reset"] {
+    background-color: #e2c7da; 
+    color: grey;              
+    padding: 10px 20px;       
+    font-size: 16px;          
+    border: none;             
+    border-radius: 5px;    
+    cursor: pointer;         
+    transition: background-color 0.3s ease;
+  }
+
+  input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #d2abc7; 
+}
